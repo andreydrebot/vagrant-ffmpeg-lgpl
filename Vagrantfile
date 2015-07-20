@@ -81,7 +81,7 @@ Vagrant.configure(2) do |config|
     
     git clone https://github.com/FFmpeg/FFmpeg.git
     cd FFmpeg/
-    ./configure --prefix="/home/vagrant/ffmpeg_build" --arch=x86_64 --cross-prefix=x86_64-w64-mingw32- --target-os=mingw32 --enable-static --disable-shared --disable-debug --disable-yasm --disable-w32threads --disable-network --extra-libs=-static --extra-cflags="-I/home/vagrant/ffmpeg_build/include" --extra-ldflags="-L/home/vagrant/ffmpeg_build/lib"
+    ./configure --prefix="/home/vagrant/ffmpeg_build" --arch=x86_64 --cross-prefix=x86_64-w64-mingw32- --target-os=mingw32 --enable-static --disable-shared --disable-debug --disable-yasm --disable-w32threads --disable-network --enable-libmp3lame --extra-libs=-static --extra-cflags="-I/home/vagrant/ffmpeg_build/include" --extra-ldflags="-L/home/vagrant/ffmpeg_build/lib"
     make
     
     cp ffmpeg.exe /vagrant
